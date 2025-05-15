@@ -9,13 +9,20 @@
             padding-top: $grid-gutter-width;
         }
     }
+    
 }
+
+.filters .module {
+    background:transparent !important;
+}
+
 
 .module-heading {
     @include clearfix;
     margin: 0;
-    padding: math.div($grid-gutter-width,3) $gutterX;
-    font-size: $font-size-base;
+    padding: 15px;
+    font-size: 14px;
+    font-weight:600;
     line-height: 1.3;
     background-color: $moduleHeadingBackgroundColor;
     display:flex;
@@ -39,9 +46,13 @@
     }
 }
 
-.module-heading {
-    border-radius:$border-radius;
-}
+    .module-heading {
+        background:#E9E9EF;
+        .fa {
+            margin-right: 5px;
+            color:#A5A5CA;
+        }
+    }
 
 .module-footer {
     padding: 7px $gutterX 7px;
@@ -67,7 +78,6 @@
 
 // Module Shallow
 .module-narrow.module-shallow {
-background:transparent;    
 }
 .module-shallow .module-content {
     padding: 10px;
@@ -88,8 +98,10 @@ background:transparent;
 }
 
 // Secondary column specific
-.module-narrow {
+.secondary .module {
     background:white;
+}
+.module-narrow {
     .module-heading,
     .module-content,
     .module-footer {
@@ -196,4 +208,9 @@ article.module {
         height:100%;
         object-fit:cover;
     }
+}
+
+.module.license {
+    background:white;
+   
 }

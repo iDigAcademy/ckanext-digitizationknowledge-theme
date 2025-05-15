@@ -5,6 +5,12 @@
 // Group List
 // A group item summary plus a list of datasets belonging to the group.
 // TODO: This should really be on the parent.
+.group-list {
+    background:transparent;
+    .module-heading {
+        background:white;
+    }
+}
 .group-list:nth-child(odd) {
     clear: left;
 }
