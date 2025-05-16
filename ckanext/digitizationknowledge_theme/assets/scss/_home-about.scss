@@ -1,0 +1,43 @@
+.home-about {
+	margin-bottom:6rem;
+	&__headline {
+		font-size:45px;
+		&--small {
+			margin-bottom:0;
+			font-weight:500;
+		font-size:25px;
+		}
+	}
+	&__copy {
+		line-height:25px;
+		*:not(:last-child) {
+			margin-bottom:1rem;
+		}
+	}
+}
+
+.home-about-blocks {
+	&__headline {
+		margin-bottom:1rem;
+font-size: 20px;
+		
+	}
+}
+
+.home-about-block {
+	&:not(:last-of-type) {
+		margin-bottom:2rem;
+	}
+	background:white;
+	display:flex;
+	align-items:center;
+	padding:30px;
+	&__graphic {
+		margin-right:30px;
+	}
+	&__headline {
+		font-size:25px;
+		font-weight:500;
+		
+	}
+}
