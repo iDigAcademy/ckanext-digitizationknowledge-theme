@@ -3,11 +3,17 @@
         background: linear-gradient(90deg, rgba(19, 42, 136, 0.7) 0%, rgba(4, 134, 123, 0.7) 100%), linear-gradient(0deg, rgba(56, 80, 174, 0.4), rgba(56, 80, 174, 0.4)), url("#{$imagePath}/butterfly.jpg");
         border-radius: 15px;
         background-size:cover;
+        padding: 30px 20px;
+        @include media-breakpoint-up(lg) {
         padding: 80px;
+        }
     }
     .hero {
         color:white;
+        margin:20px;
+        @include media-breakpoint-up(lg) {
         margin:20px 0;
+    }
         
         h2 {
             
@@ -27,7 +33,10 @@
     }
     .module-search {
         color: #fff;
+       padding: 20px;
+        @include media-breakpoint-up(lg) {
        padding: 40px;
+   }
         background: rgba(6, 24, 94, 0.4);
            border-radius: 10px;
            border: none;
@@ -54,10 +63,20 @@
             }
         }
         .tags {
-            background: rgba(27, 45, 118, 0.4);
             border-radius: 90px;
-            padding: 12px 12px 12px 25px;
             display:flex;
+               flex-direction:column;
+               .tag:not(:last-of-type) {
+           @include media-breakpoint-down(sm) { 
+                   margin-bottom:1rem;
+               }
+           }
+            
+           @include media-breakpoint-up(lg) { 
+            background: rgba(27, 45, 118, 0.4);
+               flex-direction:row;
+            padding: 12px 12px 12px 25px;
+           }
             align-items:center;
             justify-content:space-between;
 

@@ -197,7 +197,6 @@ $notificationsBg: #C9403A;
                         padding: $nav-link-padding-y $nav-link-padding-x;
                         @include font-size($nav-link-font-size);
                         font-weight: $nav-link-font-weight;
-                        color: $white;
                         text-decoration: if($link-decoration == none, null, none);
                         @include transition($nav-link-transition);
 

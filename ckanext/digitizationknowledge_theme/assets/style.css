@@ -4180,7 +4180,7 @@ textarea.form-control-lg {
 }
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.55);
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: #3850AE;
 }
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -10683,6 +10683,10 @@ a.tag:hover {
   margin-right: 0;
 }
 
+.navbar-toggler .fa-bars {
+  color: #3850AE;
+}
+
 .js .js-hide {
   display: none;
 }
@@ -12360,14 +12364,24 @@ td.diff_header {
 }
 
 .homepage .hero .container {
-  background: linear-gradient(90deg, rgba(19, 42, 136, 0.7) 0%, rgba(4, 134, 123, 0.7) 100%), linear-gradient(0deg, rgba(56, 80, 174, 0.4), rgba(56, 80, 174, 0.4)), url("../images/butterfly.jpg");
+  background: linear-gradient(90deg, rgba(19, 42, 136, 0.7) 0%, rgba(4, 134, 123, 0.7) 100%), linear-gradient(0deg, rgba(56, 80, 174, 0.4), rgba(56, 80, 174, 0.4)), url("../../../base/images/butterfly.jpg");
   border-radius: 15px;
   background-size: cover;
-  padding: 80px;
+  padding: 30px 20px;
+}
+@media (min-width: 992px) {
+  .homepage .hero .container {
+    padding: 80px;
+  }
 }
 .homepage .hero {
   color: white;
-  margin: 20px 0;
+  margin: 20px;
+}
+@media (min-width: 992px) {
+  .homepage .hero {
+    margin: 20px 0;
+  }
 }
 @media (min-width: 1200px) {
   .homepage .hero h2, .homepage .hero .h2 {
@@ -12385,10 +12399,15 @@ td.diff_header {
 }
 .homepage .module-search {
   color: #fff;
-  padding: 40px;
+  padding: 20px;
   background: rgba(6, 24, 94, 0.4);
   border-radius: 10px;
   border: none;
+}
+@media (min-width: 992px) {
+  .homepage .module-search {
+    padding: 40px;
+  }
 }
 .homepage .module-search .search-form {
   padding: 0;
@@ -12410,12 +12429,23 @@ td.diff_header {
   align-items: center;
 }
 .homepage .module-search .tags {
-  background: rgba(27, 45, 118, 0.4);
   border-radius: 90px;
-  padding: 12px 12px 12px 25px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 575.98px) {
+  .homepage .module-search .tags .tag:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .homepage .module-search .tags {
+    background: rgba(27, 45, 118, 0.4);
+    flex-direction: row;
+    padding: 12px 12px 12px 25px;
+  }
 }
 .homepage .module-search .tags h3, .homepage .module-search .tags .h3 {
   font-size: 0.875rem;
@@ -12645,7 +12675,6 @@ td.diff_header {
   .masthead .main-navbar ul li a {
     display: block;
     padding: 0.5rem 1rem;
-    color: #fff;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   }
 }
@@ -12666,7 +12695,7 @@ td.diff_header {
   }
 }
 .site-footer {
-  background: linear-gradient(0deg, rgba(32, 57, 152, 0.9), rgba(32, 57, 152, 0.9)), url("../images/feather.jpg");
+  background: linear-gradient(0deg, rgba(32, 57, 152, 0.9), rgba(32, 57, 152, 0.9)), url("../../../base/images/feather.jpg");
   background-size: cover;
   padding: 20px 0;
   position: relative;
@@ -12703,7 +12732,7 @@ td.diff_header {
   width: 68px;
   height: 21px;
   margin-top: 2px;
-  background: url("../images/ckan-logo-footer.png") no-repeat top left;
+  background: url("../../../base/images/ckan-logo-footer.png") no-repeat top left;
   text-indent: -900em;
 }
 .site-footer .lang-select .form-group {
@@ -12768,7 +12797,7 @@ td.diff_header {
 .js .table-toggle-more .toggle-seperator td {
   height: 11px;
   padding: 0;
-  background-image: url("../images/table-seperator.png");
+  background-image: url("../../../base/images/table-seperator.png");
 }
 .js .table .toggle-show td {
   background: none;
@@ -13012,7 +13041,7 @@ td.diff_header {
 
 .format-label {
   text-indent: -900em;
-  background: url("../images/sprite-resource-icons.png") no-repeat 0 0;
+  background: url("../../../base/images/sprite-resource-icons.png") no-repeat 0 0;
 }
 
 .format-label {
