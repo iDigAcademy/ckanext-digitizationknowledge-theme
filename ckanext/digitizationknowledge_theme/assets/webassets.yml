@@ -12,3 +12,14 @@
 #   output: ckanext-digitizationknowledge_theme/%(version)s-digitizationknowledge_theme.css
 #   contents:
 #     - css/digitizationknowledge_theme.css
+# digitizationknowledge_theme-css:
+#   filter: cssrewrite
+#   output: ckanext-digitizationknowledge_theme/%(version)s-digitizationknowledge_theme.css
+#   contents:
+#     - style.css
+
+digitizationknowledge_theme-css:
+  filter: cssrewrite
+  output: digitizationknowledge_theme/%(version)s-digitizationknowledge_theme.css
+  contents:
+    - styles/main.css
