@@ -12468,6 +12468,41 @@ td.diff_header {
     margin-bottom: 1rem;
   }
 }
+.comment h3, .comment .h3 {
+  font-size: 15px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #DFDFE4;
+}
+.comment .submitted {
+  margin-bottom: 1rem;
+  font-size: 13px;
+  font-weight: 400;
+}
+.comment .submitted img {
+  margin-left: 0.5rem;
+}
+.comment .content .comment-edit, .comment .content .comment-reply {
+  margin-bottom: 1rem;
+  background: #F2F2F5;
+  padding: 15px;
+}
+.comment .form-controls {
+  margin-bottom: 1rem;
+}
+
+.comment-wrapper {
+  margin-bottom: 2rem;
+}
+
+.comment-wrapper .comment-wrapper {
+  background: #F2F2F5;
+  padding: 30px;
+}
+.comment-wrapper .comment-wrapper h3, .comment-wrapper .comment-wrapper .h3 {
+  border-bottom: 1px solid #CECEE0;
+}
+
 .home-about {
   margin-bottom: 6rem;
 }
