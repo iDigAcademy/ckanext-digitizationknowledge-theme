@@ -18,8 +18,17 @@
 #   contents:
 #     - style.css
 
-digitizationknowledge_theme-css:
-  filter: cssrewrite
-  output: digitizationknowledge_theme/%(version)s-digitizationknowledge_theme.css
+# digitizationknowledge_theme-css:
+#   filter: cssrewrite
+#   output: digitizationknowledge_theme/%(version)s-digitizationknowledge_theme.css
+#   contents:
+#     - styles/main.css
+
+main-css:
+  output: digitizationknowledge_theme/%(version)s_main.css
   contents:
     - styles/main.css
+  filter: cssrewrite
+  extra:
+    preload:
+      - base/main
