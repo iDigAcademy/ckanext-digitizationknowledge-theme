@@ -12431,14 +12431,17 @@ td.diff_header {
 .homepage .module-search .tags {
   border-radius: 90px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 @media (max-width: 575.98px) {
   .homepage .module-search .tags .tag:not(:last-of-type) {
     margin-bottom: 1rem;
   }
+}
+.homepage .module-search .tags .tag {
+  margin: 5px;
 }
 @media (min-width: 992px) {
   .homepage .module-search .tags {
