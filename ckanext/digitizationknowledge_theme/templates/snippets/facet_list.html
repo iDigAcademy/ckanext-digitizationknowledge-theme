@@ -1,14 +1,3 @@
-<style>
-    /* Simple chevron rotation */
-    [data-bs-toggle="collapse"] .fa-chevron-down {
-        transition: transform 0.2s ease;
-    }
-    [data-bs-toggle="collapse"][aria-expanded="false"] .fa-chevron-down {
-        transform: rotate(-90deg);
-    }
-</style>
-
-
 {#
 Construct a facet module populated with links to filtered results.
 
@@ -47,14 +36,17 @@ search_facets
 Dictionary with search facets
 
 #}
-{#
-Construct a facet module populated with links to filtered results.
-... [existing comments] ...
-#}
-{#
-Construct a facet module populated with links to filtered results.
-... [existing comments] ...
-#}
+
+<style>
+    /* Simple chevron rotation */
+    [data-bs-toggle="collapse"] .fa-chevron-down {
+        transition: transform 0.2s ease;
+    }
+    [data-bs-toggle="collapse"][aria-expanded="false"] .fa-chevron-down {
+        transform: rotate(-90deg);
+    }
+</style>
+
 {% block facet_list %}
     {% set hide_empty = hide_empty or false %}
     {% with items = items or h.get_facet_items_dict(name, search_facets) %}
