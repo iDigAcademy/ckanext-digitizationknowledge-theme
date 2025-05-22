@@ -10204,6 +10204,7 @@ a.tag:hover {
 
 .filters .module {
   background: transparent !important;
+  margin-bottom: 10px !important;
 }
 
 .module-heading {
@@ -12179,6 +12180,12 @@ td.diff_header {
   margin-right: 5px;
   color: #A5A5CA;
 }
+.filters [data-bs-toggle=collapse] .fa-chevron-down {
+  transition: transform 0.2s ease;
+}
+.filters [data-bs-toggle=collapse][aria-expanded=false] .fa-chevron-down {
+  transform: rotate(-90deg);
+}
 
 @media (max-width: 767.98px) {
   .wrapper {
@@ -13289,4 +13296,4 @@ td.diff_header {
   align-items: center;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

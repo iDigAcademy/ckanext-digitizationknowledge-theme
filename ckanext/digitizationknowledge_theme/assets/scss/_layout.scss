@@ -96,6 +96,12 @@
       color: #A5A5CA;
     }
   }
+  [data-bs-toggle="collapse"] .fa-chevron-down {
+      transition: transform 0.2s ease;
+  }
+  [data-bs-toggle="collapse"][aria-expanded="false"] .fa-chevron-down {
+      transform: rotate(-90deg);
+  }
 }
 
 @include media-breakpoint-down(md) {
