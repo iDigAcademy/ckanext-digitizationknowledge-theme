@@ -32,7 +32,9 @@
 }
 
 
-
+.module-content.page-header + .module-content {
+    background:white;
+}
 .module-content {
     padding:$grid-gutter-width;
 
