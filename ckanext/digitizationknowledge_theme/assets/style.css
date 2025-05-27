@@ -10223,6 +10223,10 @@ a.tag:hover {
   content: "";
 }
 
+.module-content.page-header + .module-content {
+  background: white;
+}
+
 .module-content {
   padding: 1.5rem;
 }
