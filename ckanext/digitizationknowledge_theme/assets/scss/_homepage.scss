@@ -64,7 +64,7 @@
         }
         .tags {
             border-radius: 90px;
-            display:flex;
+            display:inline-flex;
             flex-wrap:wrap;
                flex-direction:column;
                .tag:not(:last-of-type) {
