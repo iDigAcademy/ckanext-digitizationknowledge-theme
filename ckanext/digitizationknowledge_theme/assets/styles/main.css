@@ -10375,7 +10375,7 @@ a.tag:hover {
 
 .module-image {
   float: left;
-  width: 150px;
+  width: 100px;
   height: 50px;
   overflow: hidden;
   line-height: 50px;
@@ -11406,20 +11406,12 @@ select[data-module=autocomplete] {
 }
 
 .dataset-item {
-  padding-bottom: 20px;
+  padding: 20px;
   margin-bottom: 20px;
   position: relative;
 }
-.dataset-item:not(:last-of-type):before {
-  display: block;
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid #FFFFFF;
-  box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+.dataset-item:not(.module-content) {
+  background-color: #f8f8fb;
 }
 
 @media (max-width: 575.98px) {
@@ -11431,6 +11423,22 @@ select[data-module=autocomplete] {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.dataset-content {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.dataset-content:before {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .dataset-heading {
@@ -11576,7 +11584,7 @@ select[data-module=autocomplete] {
   transition: color 0.2s background 0.2s;
   background: transparent;
   border: 1px solid var(--badge-color);
-  --badge-color:white;
+  --badge-color:#11131E;
   color: var(--badge-color);
 }
 .badge:hover {
@@ -12373,6 +12381,39 @@ td.diff_header {
   margin-top: 20px;
 }
 
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-header__headline-wrap {
+  text-align: center;
+  color: white;
+  background: linear-gradient(90deg, rgba(19, 42, 136, 0.7) 0%, rgba(4, 134, 123, 0.7) 100%), linear-gradient(0deg, rgba(56, 80, 174, 0.4), rgba(56, 80, 174, 0.4)), url("../../../base/images/section-header.jpg");
+  border-radius: 15px;
+  background-size: cover;
+  padding: 30px 20px;
+  margin-bottom: 2rem;
+}
+
+.section-header__headline {
+  margin: 0;
+}
+@media (min-width: 992px) {
+  .section-header__headline {
+    font-size: 35px;
+  }
+}
+
+.section-header__copy {
+  text-align: center;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .section-header__copy {
+    width: 58%;
+  }
+}
+
 .homepage .hero .container {
   background: linear-gradient(90deg, rgba(19, 42, 136, 0.7) 0%, rgba(4, 134, 123, 0.7) 100%), linear-gradient(0deg, rgba(56, 80, 174, 0.4), rgba(56, 80, 174, 0.4)), url("../../../base/images/butterfly.jpg");
   border-radius: 15px;
@@ -12440,7 +12481,7 @@ td.diff_header {
 }
 .homepage .module-search .tags {
   border-radius: 90px;
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
@@ -12534,14 +12575,20 @@ td.diff_header {
   margin-bottom: 1rem;
 }
 
+.home-about-blocks {
+  display: flex;
+}
 .home-about-blocks__headline {
   margin-bottom: 1rem;
   font-size: 20px;
+  text-align: center;
 }
 
 .home-about-block {
-  background: white;
+  text-align: center;
+  width: 33%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 30px;
 }
@@ -12549,7 +12596,9 @@ td.diff_header {
   margin-bottom: 2rem;
 }
 .home-about-block__graphic {
-  margin-right: 30px;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 1rem;
 }
 .home-about-block__headline {
   font-size: 25px;
@@ -12733,7 +12782,6 @@ td.diff_header {
 }
 @media (max-width: 991.98px) {
   .masthead .main-navbar ul li a:hover, .masthead .main-navbar ul li a:focus {
-    color: #fff;
     text-decoration: none;
   }
   .masthead .main-navbar ul li a.disabled {

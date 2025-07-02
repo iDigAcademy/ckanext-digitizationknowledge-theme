@@ -284,3 +284,33 @@
 .view-preview-container {
   margin-top: 20px;
 }
+
+
+.section-header {
+  margin-bottom:2rem;
+  
+}
+.section-header__headline-wrap {
+  text-align:center;
+  color:white;
+  background: linear-gradient(90deg, rgba(19, 42, 136, 0.7) 0%, rgba(4, 134, 123, 0.7) 100%), linear-gradient(0deg, rgba(56, 80, 174, 0.4), rgba(56, 80, 174, 0.4)), url("#{$imagePath}/section-header.jpg");
+  border-radius: 15px;
+  background-size:cover;
+  padding: 30px 20px;
+  margin-bottom:2rem;
+}
+
+.section-header__headline {
+  margin:0;
+  @include media-breakpoint-up(lg) {
+  font-size:35px;
+  }
+}
+
+.section-header__copy {
+  text-align:center;
+  margin:0 auto;
+  @include media-breakpoint-up(lg) {
+  width:58%;
+}
+}

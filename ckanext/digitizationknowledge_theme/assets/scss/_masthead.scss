@@ -202,7 +202,6 @@ $notificationsBg: #C9403A;
 
                         &:hover,
                         &:focus {
-                            color: $white;
                             text-decoration: if($link-hover-decoration == underline, none, null);
                         }
 
