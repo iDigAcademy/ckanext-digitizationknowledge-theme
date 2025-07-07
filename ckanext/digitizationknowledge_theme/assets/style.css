@@ -11469,6 +11469,22 @@ select[data-module=autocomplete] {
   margin-right: 0;
 }
 
+.dataset-resources__top {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.dataset-resources__bottom {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.dataset-resources__bottom li {
+  margin-right: 0.5rem;
+}
+
 .dataset-resources {
   margin-top: 8px;
 }
