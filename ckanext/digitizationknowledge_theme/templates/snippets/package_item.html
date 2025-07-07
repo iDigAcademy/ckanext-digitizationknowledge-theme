@@ -37,18 +37,7 @@
 	  {% endif %}
 	{% endblock %}
 	
-	{# Row 3 - Tags #}
-	{% if package.tags %}
-	  <ul>
-		{% for tag in package.tags %}
-		  <li>
-			<a href="{{ h.url_for('dataset.search', tags=tag.name) }}" title="{{ tag.display_name }}">{{ tag.display_name|truncate(22) }}</a>
-		  </li>
-		{% endfor %}
-	  </ul>
-	{% endif %}
-	
-	{# Row 4 - Logo, language, published date, and resources #}
+	{# Row 3-4 - Logo, language, published date, and resources #}
 	{% block resources %}
 	  <div class="dataset-resources-wrapper">
 		<div class="dataset-resources__top">
@@ -65,9 +54,9 @@
 			</a>
 		  {% endif %}
 		  {# Tags similar to homepage search #}
-		  {% if tags %}
+		  {% if package.tags %}
 			<div class="tags">
-			  {% for tag in tags %}
+			  {% for tag in package.tags %}
 			  <a class="tag" href="{% url_for 'dataset.search', tags=tag.name %}" title="{{ tag.display_name }}">{{ tag.display_name|truncate(22) }}</a>
 			  {% endfor %}
 			</div>
@@ -76,7 +65,7 @@
 		<ul class="dataset-resources__bottom">
 		  {# Language field #}
 		  {% if package.in_language %}
-			<li><strong>{{ _('Language') }}:</strong> {{ package.in_language }}</li>
+			<li><strong>{{ _('Language') }}:</strong> {% for language in package.in_language %}{{ language }}{% endfor %}</li>
 		  {% endif %}
 		  {# Published date - assuming field name, adjust as needed #}
 		  {% if package.metadata_created %}
