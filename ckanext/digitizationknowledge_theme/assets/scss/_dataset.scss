@@ -24,19 +24,7 @@
 
 
 .dataset-content {
-  position:relative;
-  padding-bottom:20px;
-  margin-bottom:20px;
-  &:before {
-      display:block;
-      content:"";
-      position:absolute;
-      height:1px;
-      width:100%;
-      bottom:0;
-      left:0;
-      border-bottom: 1px solid #e5e5e5;
-  }
+ 
 }
 
 .dataset-heading {
@@ -70,6 +58,18 @@
       color:white;
 }
 .dataset-resources-wrapper {
+  padding-top:20px;
+  position:relative;
+  &:before {
+      display:block;
+      content:"";
+      position:absolute;
+      height:1px;
+      width:100%;
+      top:0;
+      left:0;
+      border-bottom: 1px solid #e5e5e5;
+  }
   
 }
 .dataset-resources__top{
@@ -218,10 +218,6 @@
     border: 1px solid var(--badge-color);
     --badge-color:#11131E;
     color: var(--badge-color);
-    &:hover {
-   background: var(--badge-color);
-      
-    }
 }
 .badge[data-format=html],
 .badge[data-format*=html] {
