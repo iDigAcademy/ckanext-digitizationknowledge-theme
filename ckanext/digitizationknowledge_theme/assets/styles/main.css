@@ -12593,6 +12593,7 @@ td.diff_header {
 
 .home-about-blocks {
   display: flex;
+  flex-wrap: wrap;
 }
 .home-about-blocks__headline {
   margin-bottom: 1rem;
@@ -12602,11 +12603,16 @@ td.diff_header {
 
 .home-about-block {
   text-align: center;
-  width: 33%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px;
+}
+@media (min-width: 992px) {
+  .home-about-block {
+    width: 33%;
+  }
 }
 .home-about-block:not(:last-of-type) {
   margin-bottom: 2rem;
