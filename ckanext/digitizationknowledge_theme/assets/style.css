@@ -11410,12 +11410,18 @@ select[data-module=autocomplete] {
 }
 
 .dataset-item {
+  background-color: #f8f8fb;
   padding: 20px;
   margin-bottom: 20px;
   position: relative;
 }
-.dataset-item:not(.module-content) {
-  background-color: #f8f8fb;
+
+.dataset-item.module-content {
+  margin-bottom: 20px !important;
+}
+
+.dataset-item.module-content:nth-child(1) {
+  margin-top: 20px !important;
 }
 
 @media (max-width: 575.98px) {
@@ -11605,6 +11611,11 @@ select[data-module=autocomplete] {
   border: 1px solid var(--badge-color);
   --badge-color:#11131E;
   color: var(--badge-color);
+}
+.badge:hover {
+  background: var(--badge-color);
+  color: white;
+  text-decoration: none;
 }
 
 .badge[data-format=html],
