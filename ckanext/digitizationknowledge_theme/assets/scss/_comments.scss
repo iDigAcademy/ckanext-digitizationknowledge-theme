@@ -41,3 +41,21 @@
 	background:#F2F2F5;
 	padding:30px;
 }
+
+.comment-action.flag-button {
+	display: flex;
+	align-items: center;
+}
+
+.comment-flagged {
+display: flex;
+align-content: center;
+line-height: 1;
+i {
+margin-right:5px;	
+}
+}
+
+.notification-actions {
+	margin-top:15px;
+}
