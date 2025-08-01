@@ -3,7 +3,8 @@
 {% set dataset_type = h.default_package_type() %}
 
 <div class="module-search card box">
-  <form class="module-content search-form" method="get" action="{% url_for dataset_type ~ '.search' %}">
+  {% set search_dataset_type = h.default_package_type() %}
+  <form class="module-content search-form" method="get" action="{{ h.url_for(search_dataset_type ~ '.search') }}">
     <h3 class="heading">{{ _("Search Resources") }}</h3>
     <div class="search-input form-group search-giant">
       <input aria-label="{% block header_site_search_label %}{{ h.humanize_entity_type('package', dataset_type, 'search placeholder') or _('Search resources') }}{% endblock %}" id="field-main-search" type="text" class="form-control" name="q" value="" autocomplete="off" placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}" />
@@ -16,7 +17,7 @@
   <div class="tags">
     <h3>{{ _('Popular tags') }}</h3>
     {% for tag in tags %}
-      <a class="tag" href="{% url_for dataset_type ~ '.search', tags=tag.name %}" title="{{ tag.display_name }}">{{ tag.display_name|truncate(22) }}</a>
+      <a class="tag" href="{{ h.url_for(search_dataset_type ~ '.search', tags=tag.name) }}" title="{{ tag.display_name }}">{{ tag.display_name|truncate(22) }}</a>
     {% endfor %}
   </div>
 </div>

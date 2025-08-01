@@ -56,8 +56,9 @@
 		  {# Tags similar to homepage search #}
 		  {% if package.tags %}
 			<div class="tags">
+			  {% set search_dataset_type = h.default_package_type() %}
 			  {% for tag in package.tags %}
-			  <a class="tag" href="{% url_for dataset_type ~ '.search', tags=tag.name %}" title="{{ tag.display_name }}">{{ tag.display_name|truncate(22) }}</a>
+			  <a class="tag" href="{{ h.url_for(search_dataset_type ~ '.search', tags=tag.name) }}" title="{{ tag.display_name }}">{{ tag.display_name|truncate(22) }}</a>
 			  {% endfor %}
 			</div>
 		  {% endif %}
